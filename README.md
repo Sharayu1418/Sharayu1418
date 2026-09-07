@@ -1,3 +1,4 @@
+[profile-README.md](https://github.com/user-attachments/files/31891880/profile-README.md)
 # Hello, I'm Sharayu Rasal
 ### 👨‍💻 Building Intelligent & Scalable Systems! 💡
 
@@ -6,6 +7,105 @@ Software Engineer | Full-Stack Developer | Applied AI Engineer | Cloud & DevOps 
 Python • Django • React • FastAPI • PyTorch • AWS • Docker • Kubernetes
 
 <br>
+<h1 align="center">Sharayu Rasal</h1>
+
+<p align="center">
+  <b>I build the systems around AI models not just the part that calls the model.</b>
+</p>
+
+<p align="center">
+  <a href="https://sharayu.dev">sharayu.dev</a> ·
+  <a href="https://linkedin.com/in/sharayu-rasal-70a030213">LinkedIn</a> ·
+  <a href="mailto:srr10019@nyu.edu">Email</a>
+</p>
+
+---
+
+CS master's from NYU, based in New York. Most of what I enjoy sits one layer below the demo — the router that decides which agent answers, the queue that absorbs a camera dropping offline, the eval that notices an answer got worse before a user does.
+
+The two things that taught me the most were both bugs. A supervisor that couldn't tell an agent had already replied, so it re-routed the same message until a guard fired — 5× the latency, invisible until I measured it. And a TSV read through a legacy codepage that quietly renamed a coffee brand in a production catalog, which is how I learned that "the data looks fine" and "the data is fine" are different claims.
+
+**Currently building:** [VITAL](https://github.com/Sharayu1418/vital-agent), and pulling its eval harness out into something other people can run.
+
+---
+
+## Featured projects
+
+### VITAL — a multi-agent life copilot
+**[Live app](https://vital-agent.vercel.app) · [Code](https://github.com/Sharayu1418/vital-agent)**
+
+Six specialized agents on a LangGraph state machine, Gemini on Vertex AI, FastAPI with SSE streaming, Next.js 15 front end. Sleep, energy, weather, places and interests go in; a plan you have to approve comes out.
+
+**~480 tests · CI on every push · routing eval gated at ≥90%**
+
+The part I'd defend in an interview: the node that commits a plan to your calendar has exactly one inbound edge, and it comes from the human approval resume. It isn't a rule the model is asked to follow — it's a path that does not exist, so no prompt injection can reach it. Guarantees belong in topology, not in prompts.
+
+The other part: the energy forecast is Borbély's two-process model with constants solved numerically and pinned by tests, and it reports a confidence that degrades honestly. With no data it says 10% and tells you the curve isn't yours.
+
+---
+
+### Real-time multi-camera vision pipeline
+**[Code](https://github.com/Sharayu1418/RealTimeComputerVisionPipeline)**
+
+RTSP → Kafka → Triton Inference Server (YOLOv8 ONNX, dynamic batching, gRPC) → tracking → WebSocket dashboard, with Prometheus and Grafana watching it.
+
+**Multi-stream · GPU-batched inference · observability from day one**
+
+Built to find out where a streaming CV system actually breaks, which turned out to be nowhere near the model. Letterbox preprocessing, batch windows, and what happens to the whole pipeline when one camera stops answering — the decisions are written down in `DECISIONS.md` rather than lost.
+
+---
+
+### SmartCache AI
+**[Code](https://github.com/Sharayu1418/SmartCache-AI)**
+
+Django REST + React, with a Redis/Celery pipeline running a cosine-similarity recommender that pre-caches content to S3 before a user asks for it.
+
+**Built for the case where the network is the bottleneck, not the model**
+
+Recommendation systems usually assume the content is one request away. This one assumes it isn't — which changes the problem from "what should we show" to "what should already be here."
+
+---
+
+## Open source
+
+Twelve merged pull requests into repositories I don't own:
+
+| Project | What I changed |
+|---|---|
+| **[spcl/serverless-benchmarks](https://github.com/spcl/serverless-benchmarks/pull/284)** | AWS Lambda Function URLs as an HTTP trigger alternative, avoiding API Gateway's 29-second ceiling. ETH Zurich's serverless benchmarking suite — 33 comments of review, and worth every one. |
+| **[fossamagna/amplify-backend-vscode](https://github.com/fossamagna/amplify-backend-vscode/pull/675)** | Console URL builders for VerifiedPermissions policies and API Gateway REST APIs, with tests. |
+| **[DiyoWater/diyo-backend](https://github.com/DiyoWater/diyo-backend/pull/186)** | Catalog patch tooling: dry-run by default, `--apply` to write, tests that prove the diff before it touches a row. |
+| **[delta-io/kafka-delta-ingest](https://github.com/delta-io/kafka-delta-ingest/pull/222)** | Removed the direct `dynamodb_lock` dependency now that `deltalake` handles S3 locking internally via `S3DynamoDbLogStore`. *(Approved, in review.)* |
+
+Plus merged fixes to `scorbo2/swing-extras`, `abduznik/myip-obsidian`, `DakotaB75/developer-solutions-lab`, and `philippeabraxas-jpg/Responsible-Alliance-Protocol`.
+
+---
+
+## Toolkit
+
+| | |
+|---|---|
+| **Languages** | Python, TypeScript, JavaScript, Rust, SQL |
+| **AI / agents** | LangGraph, LangChain, Vertex AI, PyTorch, LoRA, model-graded evals |
+| **Backend** | FastAPI, Django REST, Node, SSE, async Python |
+| **Data & streaming** | Kafka, Spark, Hadoop, Delta Lake, Triton Inference Server |
+| **Cloud** | AWS (Lambda, SQS, DynamoDB, SAM/CDK, OpenSearch), GCP (Cloud Run, Vertex), Vercel |
+| **Infra** | Docker, Kubernetes, GitHub Actions, Prometheus, Grafana, Terraform-adjacent IaC |
+| **Frontend** | React, Next.js, Tailwind |
+
+---
+
+## Elsewhere
+
+I run technical workshops, I read more papers than I finish, and I have opinions about coffee in this city that I will not be defending in writing.
+
+<p align="center">
+  <a href="https://sharayu.dev">sharayu.dev</a> ·
+  <a href="https://linkedin.com/in/sharayu-rasal-70a030213">LinkedIn</a> ·
+  <a href="mailto:srr10019@nyu.edu">srr10019@nyu.edu</a>
+</p>
+
+<p align="center"><sub>Open to new-grad software engineering roles in NYC.</sub></p>
 
 I'm a **Computer Science Master's student at the New York University** with a passion for building full-stack applications and scalable, production-ready AI systems. I thrive on solving real-world problems at the intersection of distributed systems, MLOps, and product engineering.
 
