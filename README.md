@@ -38,13 +38,13 @@ Quality is measured rather than asserted. Routing, crisis detection, memory retr
 
 Built to find out where a streaming CV system actually breaks, which turned out to be nowhere near the model — it breaks at letterbox preprocessing, at batch-window sizing, and at the question of what the rest of the pipeline should do when one camera simply stops answering. The tradeoffs are written down in `DECISIONS.md` rather than lost, including the ones I'd make differently now.
 
-### SmartCache AI
+### SmartCache AI — offline content for commutes
 **[Code](https://github.com/Sharayu1418/SmartCache-AI)**
-`Django REST` `React` `Redis/Celery` `S3`
+`Django REST` `Celery` `Redis` `Channels` `React` `AutoGen` `Ollama`
 
-A recommender that pre-caches content to S3 *before* you ask for it, for users on connections that can't fetch on demand.
+Caches podcasts, articles and videos onto a device *before* the commute, so the content is there when the network isn't. Team project, delivered over seven sprints.
 
-Recommendation systems assume the content is one request away. This one assumes it isn't — which turns "what should we show this user" into "what should already be on their device by the time they open the app." Different question, different architecture, and a cache-hit rate that matters more than a ranking metric.
+A Celery job ingests feeds on a schedule and pushes media to object storage. A team of AutoGen agents running against a local Ollama model then decides what to pull down, streaming progress to the browser over Django Channels. The agents orchestrate; the ranking underneath them is deterministic SQL today, with semantic retrieval — embeddings and cosine similarity over the cached items — as the next piece of work.
 
 ---
 
