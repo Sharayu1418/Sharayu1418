@@ -12,9 +12,6 @@
 
 ---
 
-<!-- PICTURE SLOT: when the illustration is ready, wrap this About section in a two-column
-     HTML table (text left, <img width="300"> right) so it sits alongside instead of above. -->
-
 ## About
 
 CS master's from New York University. I write agent systems, and the part I have gotten stubborn about is proving that they work.
