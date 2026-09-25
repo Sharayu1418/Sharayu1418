@@ -4,7 +4,7 @@
 
 <h1 align="center">Sharayu Rasal</h1>
 
-<p align="center"><b>Software engineer in New York. I build agent systems, and I spend most of my time on whether their output is actually right.</b></p>
+<p align="center"><b>Software engineer. I build agent systems, and the interesting part is everything that happens after the model answers.</b></p>
 
 <p align="center">
 <a href="https://sharayu.dev">sharayu.dev</a> · <a href="https://linkedin.com/in/sharayu-rasal-70a030213">LinkedIn</a> · <a href="mailto:srr10019@nyu.edu">Email</a> · <a href="https://vital-agent.vercel.app">VITAL, live</a>
