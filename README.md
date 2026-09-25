@@ -17,9 +17,9 @@
 
 ## About
 
-CS master's from NYU, based in New York. I write agent systems, and the part I have gotten stubborn about is proving that they work.
+CS master's from New York University. I write agent systems, and the part I have gotten stubborn about is proving that they work.
 
-That looks less impressive than it sounds. A turn in VITAL used to take somewhere between 37 and 57 seconds and burn 12 to 16 thousand tokens, and for about a week I assumed that was just what a six-agent graph costs. It was not. The router was looping, and I only caught it because I had traces worth reading. The same fix took it to 9.6 seconds and 3.3k tokens. Routing, crisis detection, memory retrieval and answer quality all have evals now, and routing fails the build under 90%, because a warning is something I would have taught myself to scroll past by week three.
+That looks less impressive than it sounds. A turn in VITAL (an app I'm currently building) used to take somewhere between 37 and 57 seconds and burn 12 to 16 thousand tokens, and for about a week I assumed that was just what a six-agent graph costs. It was not. The router was looping, and I only caught it because I had traces worth reading. The same fix took it to 9.6 seconds and 3.3k tokens. Routing, crisis detection, memory retrieval and answer quality all have evals now, and routing fails the build under 90%, because a warning is something I would have taught myself to scroll past by week three.
 
 The other habit is writing things down while I still remember why. My vision pipeline carries a `DECISIONS.md` with the calls I made and two I would now undo, which is a less fun file to write than it sounds. And on a side project I keep one test whose only job is to catch a redaction leak, so every so often I sabotage the code on purpose to confirm it still fails. Otherwise I am just trusting a green check.
 
