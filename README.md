@@ -10,8 +10,6 @@
 <a href="https://sharayu.dev">sharayu.dev</a> · <a href="https://linkedin.com/in/sharayu-rasal-70a030213">LinkedIn</a> · <a href="mailto:srr10019@nyu.edu">Email</a> · <a href="https://vital-agent.vercel.app">VITAL, live</a>
 </p>
 
----
-
 ## About
 
 CS master's from New York University. I write agent systems, and the part I have gotten stubborn about is proving that they work.
@@ -21,8 +19,6 @@ That looks less impressive than it sounds. A turn in VITAL (an app I'm currently
 The other habit is writing things down while I still remember why. My vision pipeline carries a `DECISIONS.md` with the calls I made and two I would now undo, which is a less fun file to write than it sounds. And on a side project I keep one test whose only job is to catch a redaction leak, so every so often I sabotage the code on purpose to confirm it still fails. Otherwise I am just trusting a green check.
 
 The tidy version of my background lives on [sharayu.dev](https://sharayu.dev) and [LinkedIn](https://linkedin.com/in/sharayu-rasal-70a030213). This page is closer to the working notes.
-
----
 
 ## What I'm building
 
